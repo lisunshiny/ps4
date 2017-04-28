@@ -29,6 +29,8 @@ class TestExactSubmatches(unittest.TestCase):
        bar = 'xxabcxxxx'
        matches = list(getExactSubmatches(iter(foo), iter(bar), 3, 1))
        correct = [(1,2), (4,2), (7,2)]
+       print "im printing matches"
+       print matches
        self.assertTrue(len(matches) == len(correct))
        for x in correct:
            self.assertTrue(x in matches)
